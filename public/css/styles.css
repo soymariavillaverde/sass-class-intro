@@ -2,14 +2,14 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  @include estilo1;
+  color: darkorchid;
 }
 main #section-two {
-  @include estilo3;
+  color: green;
 }
 
 body {
-  @include estilo2;
+  background-color: burlywood;
 }
 
 /*# sourceMappingURL=styles.css.map */
