@@ -36,12 +36,13 @@
     }
     
 
-@mixin estilo3{
+@mixin subtitle{
     font-weight: normal;
     font-family: serif;
-    font-size: medium;
-    color: bisque;
+    font-size:larger;
+    color:blue;
     background-color: aqua;
+    padding: 25px;
     border-color: none;
     border-radius: 50px;
 }
@@ -59,17 +60,36 @@
     height: 200px;
     flex-direction: row;
     padding: 35px;
+    align-content: space-around;
+    align-items: center;
+}
+
+@mixin bubbles{
+    background-color: white;
+    border-radius: 50px;
+}
+
+@mixin space{
+    padding: 35px;
+    margin-right: 20vw;
 }
 main{
     @include fondo;
-    @include flexRow();
     @include position();
+    @include flexRow();
 }
 header h1 {
     @include estilo1;
     @include fondo2;
     @include fontFamily;
 }
+.section-one{
+    @include subtitle();
+    @include flexColumn();
+    @include bubbles();
+    @include space();
+}
 
+h2{@include subtitle}
 
 
