@@ -1,15 +1,95 @@
 @use 'sections';
 @import 'variables';
 
-body{
-    background-color: $backgroundColor;
+@mixin fontFamily {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+  }
 
-    header{
-        color: $titleColor;
+@mixin fondo {
+  background-image: linear-gradient(to right, #ff0000, #0000ff);
+}  
+@mixin fondo2 {
+    background-image: radial-gradient(circle at center, #ff3366, #66ccff);
+    padding: 10vh 10vw;
+  }  
+@mixin estilo1{
         width: 100%;
-        h1{
-            font-style: italic;
-            text-align: center;
-        }
-    }
+        text-align: center;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        text-transform: capitalize;
 }
+
+@mixin position{
+    text-align: center;
+
+}
+
+@mixin estilo2{
+        font-weight: bolder;
+        font-style: italic;
+        color: $TextColorThree;
+        background-color: $TextColortwo;
+        font-family: sans-serif;
+        background-color: $backgroundColor2;
+    }
+    
+
+@mixin subtitle{
+    font-weight: normal;
+    font-family: serif;
+    font-size:larger;
+    color:blue;
+    background-color: aqua;
+    padding: 25px;
+    border-color: none;
+    border-radius: 50px;
+}
+
+@mixin flexColumn{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex-direction: column-reverse;
+}
+
+@mixin flexRow{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex-direction: row;
+    padding: 35px;
+    align-content: space-around;
+    align-items: center;
+}
+
+@mixin bubbles{
+    background-color: white;
+    border-radius: 50px;
+}
+
+@mixin space{
+    padding: 35px;
+    margin-right: 20vw;
+}
+main{
+    @include fondo;
+    @include position();
+    @include flexRow();
+}
+header h1 {
+    @include estilo1;
+    @include fondo2;
+    @include fontFamily;
+}
+.section-one{
+    @include subtitle();
+    @include flexColumn();
+    @include bubbles();
+    @include space();
+}
+
+h2{@include subtitle}
+
+
