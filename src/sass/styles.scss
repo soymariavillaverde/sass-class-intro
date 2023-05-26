@@ -1,48 +1,14 @@
 @use 'sections';
 @import 'variables';
 
-body{
-    background-color: $backgroundColor;
+
+
+main{
+    @include fondo;
+}
+header h1 {
+    @include estilo1;
 }
 
-@mixin estilo1{
-        color: $titleColor;
-        width: 100%;
-        text-align: center;
-}
 
-@mixin estilo2{
-        font-weight: bolder;
-        font-style: italic;
-        color: $TextColorThree;
-        background-color: $TextColortwo;
-        font-family: sans-serif;
-        background-color: $backgroundColor2;
-    }
-    
 
-@mixin estilo3{
-    font-weight: normal;
-    font-family: serif;
-    font-size: medium;
-    color: bisque;
-    background-color: aqua;
-    border-color: none;
-    border-radius: 50px;
-}
-
-@mixin flexColumn{
-    display: flex;
-    width: 100%;
-    height: 200px;
-    flex-direction: column-reverse;
-  
-}
-
-@mixin flexRow{
-    display: flex;
-    width: 100%;
-    height: 200px;
-    flex-direction: row;
-    padding: 35px;
-}
